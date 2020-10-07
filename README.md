@@ -7,6 +7,7 @@ Just for fun and making life easier ;-)
  
 ### Instalation
 
+- go version: 1.14.5
 - get it: `go get github.com/Venomen/ttfb`
 - install it: `go install github.com/Venomen/ttfb`
 - link it: `ln -s ~/go/bin/ttfb /usr/local/bin/ttfb`

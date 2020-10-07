@@ -166,7 +166,7 @@ func main() {
 		_ = "all ok, go forward"
 	} else {
 		fmt.Println("Config file does not exist, linking default to ~/.ttfbEnv")
-		fmt.Println("Please edit it after all.")
+		fmt.Print("Please edit it after all.\n\n")
 		os.Link(".ttfbEnv", homeInside)
 		// TODO: handling copy-file error
 	}
