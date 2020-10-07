@@ -1,2 +1,2 @@
 # ttfb
-tool in golang for website speed and body search
+tool in golang for website speed and body & headers search
