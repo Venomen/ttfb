@@ -1,0 +1,6 @@
+# provide config data for main.go
+# url with http:// or https://
+# use seearch for greping HTML Body & Headers info
+
+url=""
+search=""
