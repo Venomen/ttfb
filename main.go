@@ -82,7 +82,7 @@ func enterData() {
 	if search == "" {
 		// define search
 		for {
-			fmt.Print("-> 'search' in .ttfbEnv is empty - please provide (you can use wildcards - for ex. '.*atman')?\n")
+			fmt.Print("-> 'search' in .ttfbEnv is empty - please provide (you can use wildcards - for ex. '.*com')?\n")
 			data, _ := reader.ReadString('\n')
 			// convert CRLF to LF
 			search = strings.Replace(data, "\n", "", -1)
@@ -156,10 +156,8 @@ func main() {
 	if len(os.Args) > 1 {
 		firstArg := os.Args[1]
 
-		if firstArg == "version" {
-			findVersion := regexp.MustCompile(firstArg)
-			versionMatches := findVersion.FindStringSubmatch("version")
-			fmt.Printf("ttfb %s[%s] by %s\n", versionMatches, version, copyRights)
+		if firstArg == "version" || firstArg == "help" {
+			fmt.Printf("version [%s] by %s\n", version, copyRights)
 			os.Exit(0)
 		}
 	}
@@ -167,7 +165,7 @@ func main() {
 	if configExists(homeInside) {
 		_ = "all ok, go forward"
 	} else {
-		fmt.Println("Config file does not exist, copying default to ~/.ttfbEnv")
+		fmt.Println("Config file does not exist, linking default to ~/.ttfbEnv")
 		fmt.Println("Please edit it after all.")
 		os.Link(".ttfbEnv", homeInside)
 		// TODO: handling copy-file error
