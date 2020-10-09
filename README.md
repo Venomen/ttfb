@@ -2,7 +2,7 @@
 tool in golang for testing website speed and body & headers search
 
 ### Description
-After using over and over "while curl" loops, I made simple equivalent in go. 
+After using over and over "while curl" loops, I made simple equivalent in go. You don't have to use Web Browser with Debug, curl or some other networking stuff. 
 Just for fun and making life easier ;-)
  
 ### Instalation
