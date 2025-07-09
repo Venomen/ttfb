@@ -20,9 +20,12 @@ Just for fun and making life easier ;-)
 
 "<b>url</b>" - provide url for testing, with http:// or https:// <br>
 "<b>search</b>" - you can grep some data in Header & Body from your request (wildcards available)
+"<b>--no-cache</b>" - disable HTTP keep-alive and DNS cache (each request uses a new connection, --cache is by default)
 
 ### Functions
 - http client
+- cache on/off (dns reusing transport & keep-alive mode)
 - dot .env configuration
 - cli for config options
+- searching source code elements
 - measuring connection speed; time to first byte
